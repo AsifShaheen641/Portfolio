@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Asif Shaheen | WordPress Developer & SEO Expert</title>
+<meta name="description" content="Asif Shaheen — Professional WordPress Developer, SEO Specialist, Security Expert & Approved AdSense Master. Building fast, secure, and revenue-ready websites." />
+<meta name="keywords" content="WordPress developer, SEO expert, website security, Google AdSense, Pakistan, web development, Asif Shaheen" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0a0c0f;--bg2:#0f1117;--bg3:#141720;--bg4:#1a1f2e;--green:#00ff88;--green2:#00cc6a;--green3:rgba(0,255,136,.13);--cyan:#00e5ff;--text:#e8eaf0;--text2:#8892a4;--text3:#4a5568;--border:#1e2535;--border2:#2a3347;--mono:'Share Tech Mono',monospace;--sans:'Exo 2',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,136,.015) 2px,rgba(0,255,136,.015) 4px);pointer-events:none;z-index:999}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(10,12,15,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--mono);font-size:1rem;color:var(--green);letter-spacing:.05em;text-decoration:none}
+.nav-logo span{color:var(--text2)}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav ul a{font-family:var(--mono);font-size:.82rem;color:var(--text2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s;position:relative}
+nav ul a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--green);transition:width .25s}
+nav ul a:hover{color:var(--green)}
+nav ul a:hover::after{width:100%}
+.nav-cta{font-family:var(--mono);font-size:.78rem;padding:.5rem 1.2rem;background:#25d366;color:#000;border:none;cursor:pointer;font-weight:700;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:background .2s;display:inline-flex;align-items:center;gap:.4rem}
+.nav-cta:hover{background:#20bd5a}
+
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:8rem;position:relative;overflow:hidden}
+.hero-inner{max-width:1200px;margin:0 auto;padding:0 4rem}
+#hero::after{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background-image:linear-gradient(rgba(0,255,136,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,136,.04) 1px,transparent 1px);background-size:40px 40px;mask-image:linear-gradient(to left,rgba(0,0,0,.8),transparent);pointer-events:none}
+.hero-tag{font-family:var(--mono);font-size:.8rem;color:var(--green);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+.hero-tag::before{content:'';display:inline-block;width:32px;height:1px;background:var(--green)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,255,136,.4)}50%{box-shadow:0 0 0 6px rgba(0,255,136,0)}}
+.hero-name{font-size:clamp(3.5rem,8vw,7rem);font-weight:800;line-height:1;letter-spacing:-.02em;margin-bottom:.5rem}
+.accent{color:var(--green)}
+.hero-title{font-family:var(--mono);font-size:clamp(.9rem,2vw,1.1rem);color:var(--cyan);margin-bottom:1.5rem;letter-spacing:.04em}
+.cursor{display:inline-block;animation:blink 1s step-end infinite;color:var(--green)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-desc{max-width:560px;color:var(--text2);font-size:1.05rem;margin-bottom:2.5rem;line-height:1.8}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+
+.btn-primary{font-family:var(--mono);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:.85rem 2rem;background:var(--green);color:#000;border:none;cursor:pointer;text-decoration:none;font-weight:700;transition:background .2s,transform .15s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));display:inline-block}
+.btn-primary:hover{background:#00ffaa;transform:translateY(-2px)}
+.btn-outline{font-family:var(--mono);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:.85rem 2rem;background:transparent;color:var(--green);border:1px solid var(--green);cursor:pointer;text-decoration:none;transition:background .2s,transform .15s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));display:inline-block}
+.btn-outline:hover{background:var(--green3);transform:translateY(-2px)}
+.btn-wa{font-family:var(--mono);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:.85rem 2rem;background:#25d366;color:#000;border:none;cursor:pointer;text-decoration:none;font-weight:700;transition:background .2s,transform .15s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));display:inline-flex;align-items:center;gap:.5rem}
+.btn-wa:hover{background:#20bd5a;transform:translateY(-2px)}
+
+.stats-row{display:flex;gap:3rem;margin-top:3.5rem;flex-wrap:wrap}
+.stat-num{font-size:2.2rem;font-weight:800;color:var(--green);font-family:var(--mono);display:block}
+.stat-label{font-size:.78rem;color:var(--text2);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
+
+section{padding:6rem 4rem;max-width:1200px;margin:0 auto}
+.full-w{max-width:100%;background:var(--bg2)}
+.full-w .inner{max-width:1200px;margin:0 auto;padding:6rem 4rem}
+.sec-header{margin-bottom:3.5rem}
+.sec-tag{font-family:var(--mono);font-size:.75rem;color:var(--green);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.sec-tag::before{content:'';width:20px;height:1px;background:var(--green)}
+.sec-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.sec-sub{color:var(--text2);margin-top:.75rem;max-width:520px;font-size:.98rem}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5px;background:var(--border)}
+.service-card{background:var(--bg2);padding:2.2rem;position:relative;transition:background .25s}
+.service-card:hover{background:var(--bg4)}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--green);transition:width .35s}
+.service-card:hover::before{width:100%}
+.service-icon{width:48px;height:48px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;font-size:1.4rem;background:var(--bg3)}
+.service-num{font-family:var(--mono);font-size:.7rem;color:var(--text3);letter-spacing:.15em;margin-bottom:.6rem}
+.service-title{font-size:1.1rem;font-weight:700;margin-bottom:.75rem}
+.service-desc{font-size:.9rem;color:var(--text2);line-height:1.75}
+
+.skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.skill-bar-item{margin-bottom:1.6rem}
+.skill-bar-top{display:flex;justify-content:space-between;margin-bottom:.45rem;font-size:.88rem}
+.skill-bar-name{font-weight:600}
+.skill-bar-pct{font-family:var(--mono);font-size:.8rem;color:var(--green)}
+.skill-track{height:3px;background:var(--border2);overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--green2),var(--green));width:0;transition:width 1.4s cubic-bezier(.16,1,.3,1);position:relative}
+.skill-fill::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:6px;height:6px;background:var(--green);border-radius:50%}
+.tech-tags{display:flex;flex-wrap:wrap;gap:.6rem}
+.tag{font-family:var(--mono);font-size:.75rem;padding:.4rem .9rem;border:1px solid var(--border2);color:var(--text2);background:var(--bg3);letter-spacing:.06em;transition:border-color .2s,color .2s}
+.tag:hover,.tag.hl{border-color:var(--green);color:var(--green);background:var(--green3)}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5px;background:var(--border)}
+.portfolio-card{background:var(--bg2);padding:2rem;position:relative;transition:background .25s;cursor:pointer}
+.portfolio-card:hover{background:var(--bg4)}
+.portfolio-card::after{content:'';position:absolute;bottom:0;right:0;width:0;height:2px;background:var(--cyan);transition:width .35s}
+.portfolio-card:hover::after{width:100%}
+.p-type{font-family:var(--mono);font-size:.7rem;color:var(--cyan);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem}
+.p-title{font-size:1.15rem;font-weight:700;margin-bottom:.6rem}
+.p-desc{font-size:.88rem;color:var(--text2);margin-bottom:1.2rem;line-height:1.7}
+.p-badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem}
+.badge{font-family:var(--mono);font-size:.7rem;padding:.25rem .65rem;background:var(--bg3);border:1px solid var(--border2);color:var(--text2);letter-spacing:.06em}
+.p-result{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.78rem;color:var(--green);border-top:1px solid var(--border);padding-top:1rem;margin-top:.5rem}
+.p-result::before{content:'▲';font-size:.65rem}
+.p-click{font-family:var(--mono);font-size:.75rem;color:var(--cyan);margin-top:.75rem;display:flex;align-items:center;gap:.4rem;opacity:.8}
+
+/* MODAL */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2000;display:none;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(8px)}
+.overlay.open{display:flex}
+.modal{background:var(--bg3);border:1px solid var(--border2);max-width:680px;width:100%;max-height:92vh;overflow-y:auto;position:relative;animation:slideUp .25s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.modal-close{position:absolute;top:1rem;right:1rem;background:var(--bg4);border:1px solid var(--border2);color:var(--text2);width:34px;height:34px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s;z-index:5;font-family:var(--mono)}
+.modal-close:hover{border-color:var(--green);color:var(--green)}
+.modal-header{background:var(--bg4);border-bottom:1px solid var(--border2);padding:2rem;padding-right:3.5rem}
+.modal-type{font-family:var(--mono);font-size:.7rem;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.5rem}
+.modal-title{font-size:1.6rem;font-weight:800;margin-bottom:.5rem}
+.modal-url{font-family:var(--mono);font-size:.78rem;color:var(--text3)}
+.modal-url a{color:var(--green);text-decoration:none}
+.modal-url a:hover{text-decoration:underline}
+.modal-body{padding:2rem}
+.modal-desc{color:var(--text2);font-size:.95rem;line-height:1.85;margin-bottom:1.75rem}
+.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem}
+.modal-cell{background:var(--bg4);padding:.85rem 1rem;border:1px solid var(--border)}
+.modal-cell-label{font-family:var(--mono);font-size:.68rem;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.25rem}
+.modal-cell-val{font-size:.88rem;font-weight:600}
+.modal-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.modal-btn{font-family:var(--mono);font-size:.78rem;padding:.65rem 1.4rem;font-weight:700;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.4rem;transition:background .2s,transform .15s;border:none;cursor:pointer}
+.modal-btn:hover{transform:translateY(-1px)}
+.modal-btn.green{background:var(--green);color:#000}
+.modal-btn.green:hover{background:#00ffaa}
+.modal-btn.wa{background:#25d366;color:#000}
+.modal-btn.wa:hover{background:#20bd5a}
+.modal-btn.ghost{background:transparent;color:var(--green);border:1px solid var(--green)}
+.modal-btn.ghost:hover{background:var(--green3)}
+
+.contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+.c-item{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.8rem}
+.c-icon{width:42px;height:42px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;background:var(--bg3);flex-shrink:0}
+.c-label{font-family:var(--mono);font-size:.72rem;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.25rem}
+.c-val{color:var(--text);font-size:.93rem;text-decoration:none;display:block;transition:color .2s}
+.c-val:hover{color:var(--green)}
+.c-val.sm{font-size:.85rem;color:var(--text2);margin-top:.15rem}
+.social-row{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:1.5rem}
+.soc{font-family:var(--mono);font-size:.72rem;padding:.5rem 1rem;border:1px solid var(--border2);color:var(--text2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:border-color .2s,color .2s,background .2s;display:inline-flex;align-items:center;gap:.4rem}
+.soc:hover{border-color:var(--green);color:var(--green);background:var(--green3)}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:.4rem}
+.fg label{font-family:var(--mono);font-size:.73rem;color:var(--text2);letter-spacing:.1em;text-transform:uppercase}
+.fg input,.fg textarea,.fg select{background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:.75rem 1rem;font-family:var(--sans);font-size:.9rem;outline:none;transition:border-color .2s;resize:vertical;-webkit-appearance:none;appearance:none}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--green)}
+.fg textarea{min-height:110px}
+.fg select option{background:var(--bg3)}
+.form-note{display:none;padding:.9rem 1.2rem;border:1px solid var(--green);background:var(--green3);color:var(--green);font-family:var(--mono);font-size:.82rem}
+
+footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-family:var(--mono);font-size:.78rem;color:var(--text3)}
+.footer-copy span{color:var(--green)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-family:var(--mono);font-size:.75rem;color:var(--text3);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+.footer-links a:hover{color:var(--green)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent)}
+
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  nav ul{gap:1rem}
+  section,.full-w .inner,.hero-inner,footer{padding-left:1.5rem;padding-right:1.5rem}
+  .skills-layout,.contact-layout{grid-template-columns:1fr;gap:2.5rem}
+  .form-row{grid-template-columns:1fr}
+  #hero::after{display:none}
+  .modal-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  nav ul{display:none}
+  .hero-name{font-size:2.8rem}
+  .stats-row{gap:1.5rem}
+  .full-w .inner{padding-top:4rem;padding-bottom:4rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-logo"><span>&gt;_</span> asif.dev</a>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/923136045037?text=Hi%20Asif!%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you." target="_blank" class="nav-cta">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Hire Me
+  </a>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-inner">
+    <div class="hero-tag fade-up"><span class="dot"></span> Available for Projects</div>
+    <h1 class="hero-name fade-up">Asif<br><span class="accent">Shaheen</span></h1>
+    <p class="hero-title fade-up">WordPress Developer &nbsp;·&nbsp; SEO Expert &nbsp;·&nbsp; Security Specialist &nbsp;·&nbsp; AdSense Master<span class="cursor">_</span></p>
+    <p class="hero-desc fade-up">I build fast, secure, and high-ranking WordPress websites. From custom theme development to full AdSense monetization — I handle every layer of your digital presence.</p>
+    <div class="hero-btns fade-up">
+      <a href="#portfolio" class="btn-primary">View My Work</a>
+      <a href="https://wa.me/923136045037?text=Hi%20Asif!%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you." target="_blank" class="btn-wa">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Hire Me on WhatsApp
+      </a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="stats-row fade-up">
+      <div><span class="stat-num">3+</span><span class="stat-label">Live Projects</span></div>
+      <div><span class="stat-num">5★</span><span class="stat-label">Client Rating</span></div>
+      <div><span class="stat-num">98%</span><span class="stat-label">Security Score</span></div>
+      <div><span class="stat-num">AdSense</span><span class="stat-label">Approved Master</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="full-w" id="services">
+<div class="inner">
+  <div class="sec-header fade-up">
+    <div class="sec-tag">What I Do</div>
+    <h2 class="sec-title">Core <span class="accent">Services</span></h2>
+    <p class="sec-sub">End-to-end WordPress solutions — built to perform, secured to last.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-up"><div class="service-num">01</div><div class="service-icon">⚡</div><div class="service-title">WordPress Development</div><p class="service-desc">Custom theme & plugin development, WooCommerce stores, Elementor/Divi builds, speed optimization, Core Web Vitals tuning, and full site migrations.</p></div>
+    <div class="service-card fade-up"><div class="service-num">02</div><div class="service-icon">🔍</div><div class="service-title">SEO Optimization</div><p class="service-desc">Technical SEO audits, on-page optimization, schema markup, keyword strategy, backlink profiles, sitemap structures, and rank tracking to dominate search results.</p></div>
+    <div class="service-card fade-up"><div class="service-num">03</div><div class="service-icon">🔒</div><div class="service-title">Website Security</div><p class="service-desc">Malware removal, firewall setup, brute-force protection, SSL hardening, vulnerability patching, two-factor auth, and ongoing security monitoring.</p></div>
+    <div class="service-card fade-up"><div class="service-num">04</div><div class="service-icon">💰</div><div class="service-title">AdSense Approval & Monetization</div><p class="service-desc">Get your site Google AdSense approved fast — content strategy, policy compliance, ad placement optimization, and revenue scaling for maximum CPC & RPM.</p></div>
+    <div class="service-card fade-up"><div class="service-num">05</div><div class="service-icon">🚀</div><div class="service-title">Performance Optimization</div><p class="service-desc">PageSpeed 90+ scores, lazy loading, CDN integration, database cleanup, caching via WP Rocket, and image compression for blazing-fast load times.</p></div>
+    <div class="service-card fade-up"><div class="service-num">06</div><div class="service-icon">🛡️</div><div class="service-title">Maintenance & Support</div><p class="service-desc">Regular plugin/theme updates, uptime monitoring, daily backups, security scans, and dedicated support — so your site never goes down.</p></div>
+  </div>
+</div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-header fade-up">
+    <div class="sec-tag">Expertise</div>
+    <h2 class="sec-title">Technical <span class="accent">Skills</span></h2>
+    <p class="sec-sub">Years of hands-on experience across the full WordPress ecosystem.</p>
+  </div>
+  <div class="skills-layout">
+    <div>
+      <div class="skill-bar-item fade-up"><div class="skill-bar-top"><span class="skill-bar-name">WordPress Development</span><span class="skill-bar-pct">98%</span></div><div class="skill-track"><div class="skill-fill" data-w="98"></div></div></div>
+      <div class="skill-bar-item fade-up"><div class="skill-bar-top"><span class="skill-bar-name">SEO & Search Rankings</span><span class="skill-bar-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-w="95"></div></div></div>
+      <div class="skill-bar-item fade-up"><div class="skill-bar-top"><span class="skill-bar-name">Website Security</span><span class="skill-bar-pct">96%</span></div><div class="skill-track"><div class="skill-fill" data-w="96"></div></div></div>
+      <div class="skill-bar-item fade-up"><div class="skill-bar-top"><span class="skill-bar-name">Google AdSense & Monetization</span><span class="skill-bar-pct">94%</span></div><div class="skill-track"><div class="skill-fill" data-w="94"></div></div></div>
+      <div class="skill-bar-item fade-up"><div class="skill-bar-top"><span class="skill-bar-name">WooCommerce & E-commerce</span><span class="skill-bar-pct">90%</span></div><div class="skill-track"><div class="skill-fill" data-w="90"></div></div></div>
+      <div class="skill-bar-item fade-up"><div class="skill-bar-top"><span class="skill-bar-name">Performance Optimization</span><span class="skill-bar-pct">93%</span></div><div class="skill-track"><div class="skill-fill" data-w="93"></div></div></div>
+    </div>
+    <div>
+      <p style="font-family:var(--mono);font-size:.75rem;color:var(--text3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.2rem;">Tools & Technologies</p>
+      <div class="tech-tags">
+        <span class="tag hl">WordPress</span><span class="tag hl">WooCommerce</span><span class="tag hl">Google AdSense</span><span class="tag hl">Yoast SEO</span>
+        <span class="tag">Elementor</span><span class="tag">Divi Builder</span><span class="tag">WP Rocket</span><span class="tag">Rank Math</span>
+        <span class="tag">PHP</span><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">MySQL</span>
+        <span class="tag">Cloudflare</span><span class="tag">Wordfence</span><span class="tag">cPanel</span>
+        <span class="tag">Google Search Console</span><span class="tag">Google Analytics</span><span class="tag">Ahrefs</span><span class="tag">SEMrush</span>
+      </div>
+      <div style="margin-top:2rem;padding:1.4rem;border:1px solid var(--border2);background:var(--bg3);" class="fade-up">
+        <p style="font-family:var(--mono);font-size:.72rem;color:var(--green);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.7rem;">&gt; certifications</p>
+        <p style="font-size:.87rem;color:var(--text2);margin-bottom:.45rem;">✓ Google AdSense Approved Master</p>
+        <p style="font-size:.87rem;color:var(--text2);margin-bottom:.45rem;">✓ WordPress Expert Developer</p>
+        <p style="font-size:.87rem;color:var(--text2);margin-bottom:.45rem;">✓ Yoast SEO Specialist</p>
+        <p style="font-size:.87rem;color:var(--text2);">✓ Web Security & Hardening Expert</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<div class="full-w" id="portfolio">
+<div class="inner">
+  <div class="sec-header fade-up">
+    <div class="sec-tag">Case Studies</div>
+    <h2 class="sec-title">Real <span class="accent">Projects</span></h2>
+    <p class="sec-sub">Click any project card to see full details — real sites, real results.</p>
+  </div>
+  <div class="portfolio-grid">
+
+    <div class="portfolio-card fade-up" onclick="openModal('solarshaft')" role="button" tabindex="0">
+      <div class="p-type">Solar Energy · Business Website</div>
+      <div class="p-title">SolarShaft.com</div>
+      <p class="p-desc">A professional solar energy company website built for lead generation, fast loading, and strong search rankings in the renewable energy niche.</p>
+      <div class="p-badges"><span class="badge">WordPress</span><span class="badge">SEO</span><span class="badge">Performance</span><span class="badge">Lead Gen</span></div>
+      <div class="p-result">Custom WP build with full SEO architecture</div>
+      <div class="p-click">👁 Click to view full project details</div>
+    </div>
+
+    <div class="portfolio-card fade-up" onclick="openModal('islamic')" role="button" tabindex="0">
+      <div class="p-type">Religion · Content Portal · Norway</div>
+      <div class="p-title">Islamic.no</div>
+      <p class="p-desc">Norwegian Islamic content portal — multilingual WordPress setup, security hardening, and mobile-first optimization for Scandinavian audiences.</p>
+      <div class="p-badges"><span class="badge">WordPress</span><span class="badge">Multilingual</span><span class="badge">Security</span><span class="badge">Norwegian SEO</span></div>
+      <div class="p-result">Secure multilingual portal serving Scandinavia</div>
+      <div class="p-click">👁 Click to view full project details</div>
+    </div>
+
+    <div class="portfolio-card fade-up" onclick="openModal('mystique')" role="button" tabindex="0">
+      <div class="p-type">Wellness · WooCommerce · Netherlands</div>
+      <div class="p-title">MystiqueCrystalsAndHealing.nl</div>
+      <p class="p-desc">Dutch healing crystals & Reiki therapy e-commerce store. WP Rocket powered, Dutch SEO optimized, with online booking for Reiki sessions.</p>
+      <div class="p-badges"><span class="badge">WooCommerce</span><span class="badge">WP Rocket</span><span class="badge">Dutch SEO</span><span class="badge">Booking System</span></div>
+      <div class="p-result">Live store — WP Rocket 3.17 for blazing speed</div>
+      <div class="p-click">👁 Click to view full project details</div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:2rem;padding:1.5rem 2rem;border:1px solid var(--border2);background:var(--bg3);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;" class="fade-up">
+    <div>
+      <p style="font-family:var(--mono);font-size:.75rem;color:var(--green);letter-spacing:.1em;margin-bottom:.3rem;">&gt; want to be my next success story?</p>
+      <p style="font-size:.9rem;color:var(--text2);">I'm available right now. Let's build something great together.</p>
+    </div>
+    <a href="https://wa.me/923136045037?text=Hi%20Asif!%20I%20saw%20your%20portfolio%20projects%20and%20want%20to%20discuss%20something%20similar." target="_blank" class="btn-wa" style="clip-path:none">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Start a Project Now
+    </a>
+  </div>
+</div>
+</div>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay" onclick="closeBg(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-inner"></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-header fade-up">
+    <div class="sec-tag">Get In Touch</div>
+    <h2 class="sec-title">Start a <span class="accent">Project</span></h2>
+    <p class="sec-sub">Fill the form below — it will open WhatsApp with your message pre-filled, ready to send!</p>
+  </div>
+  <div class="contact-layout">
+    <div>
+      <div class="c-item fade-up">
+        <div class="c-icon">📧</div>
+        <div>
+          <div class="c-label">Email</div>
+          <a class="c-val" href="mailto:asifshaheen641@gmail.com">asifshaheen641@gmail.com</a>
+        </div>
+      </div>
+      <div class="c-item fade-up">
+        <div class="c-icon">📱</div>
+        <div>
+          <div class="c-label">WhatsApp</div>
+          <a class="c-val" href="https://wa.me/923136045037" target="_blank">+92 313 6045037</a>
+          <a class="c-val sm" href="https://wa.me/923480745369" target="_blank">+92 348 0745369</a>
+        </div>
+      </div>
+      <div class="c-item fade-up">
+        <div class="c-icon">📍</div>
+        <div>
+          <div class="c-label">Location</div>
+          <span class="c-val" style="cursor:default">Karachi, Pakistan 🇵🇰</span>
+        </div>
+      </div>
+      <div class="c-item fade-up">
+        <div class="c-icon">⚡</div>
+        <div>
+          <div class="c-label">Response Time</div>
+          <span class="c-val" style="color:var(--green);cursor:default">Under 12 hours</span>
+        </div>
+      </div>
+
+      <div class="social-row fade-up">
+        <a class="soc" href="https://wa.me/923136045037?text=Hi%20Asif!" target="_blank">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a class="soc" href="https://www.facebook.com/asifshaheen5369" target="_blank">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a class="soc" href="https://www.fiverr.com/users/asifshaheen845/seller_dashboard" target="_blank">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-1.33c-.57 0-.787.358-.787.933v4.172h-2.06v-5.105h-1.052c-.569 0-.787.358-.787.933v4.172h-2.06V11.88h-1.864c-.62 0-.787.268-.787.78v.227a2.14 2.14 0 0 0-1.853-1.006c-1.91 0-3.168 1.543-3.168 3.524v.217c0 2.032 1.24 3.527 3.16 3.527.85 0 1.587-.354 2.078-.944v.797h2.435V12.8h1.864v6.227h2.06v-5.105h1.33v5.105h2.06V12.8h1.13c.353 0 .606-.197.606-.618V11.88h-1.735zm-14.6 3.64c0 .92-.517 1.618-1.42 1.618-.904 0-1.434-.698-1.434-1.617v-.217c0-.92.53-1.617 1.434-1.617.903 0 1.42.697 1.42 1.617v.217zm-5.24 1.924a.995.995 0 1 1 .001-1.989.995.995 0 0 1 0 1.989zm-.996-3.765h-1.33V11.88H0v1.203h-.774v-.001H0v6.944h2.06v-5.104h1.33V15.6h-1.33v.082zM2.06 8.24H0v1.963h2.06V8.24z"/></svg>
+          Fiverr
+        </a>
+        <a class="soc" href="mailto:asifshaheen641@gmail.com">✉ Email</a>
+      </div>
+
+      <div style="margin-top:1.5rem;padding:1.2rem 1.5rem;border:1px solid var(--border2);background:var(--bg3);font-family:var(--mono);font-size:.8rem;color:var(--text2);line-height:2;" class="fade-up">
+        <span style="color:var(--green);">&gt;</span> Status: <span style="color:var(--green);">● Open for work</span><br>
+        <span style="color:var(--green);">&gt;</span> Platforms: <span style="color:var(--cyan);">WhatsApp · Fiverr · Email</span>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="fg"><label for="fn">Name *</label><input type="text" id="fn" placeholder="Your full name" /></div>
+          <div class="fg"><label for="fe">Email</label><input type="email" id="fe" placeholder="your@email.com" /></div>
+        </div>
+        <div class="fg">
+          <label for="fs">Service Needed *</label>
+          <select id="fs">
+            <option value="">Select a service...</option>
+            <option>WordPress Development</option>
+            <option>SEO Optimization</option>
+            <option>Website Security</option>
+            <option>AdSense Approval & Monetization</option>
+            <option>Performance Optimization</option>
+            <option>Maintenance & Support</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fg"><label for="fm">Project Details</label><textarea id="fm" placeholder="Tell me about your project — website URL, goals, budget, timeline..."></textarea></div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+          <button class="btn-wa" onclick="sendWA()" style="clip-path:none">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Send via WhatsApp ↗
+          </button>
+          <a href="mailto:asifshaheen641@gmail.com" class="btn-outline">Send via Email</a>
+        </div>
+        <div class="form-note" id="fnote">✓ Opening WhatsApp with your message pre-filled...</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+<footer>
+  <div class="footer-copy">© 2025 <span>Asif Shaheen</span>. Karachi, Pakistan 🇵🇰</div>
+  <div class="footer-links">
+    <a href="#hero">Top</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Work</a>
+    <a href="https://wa.me/923136045037" target="_blank">WhatsApp</a>
+    <a href="mailto:asifshaheen641@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+const PROJECTS = {
+  solarshaft:{
+    type:"Solar Energy · Business Website",
+    title:"SolarShaft.com",
+    url:"https://solarshaft.com/",
+    desc:"A full-featured professional website for a solar energy company, built entirely on WordPress. The project covered custom theme development, comprehensive on-page SEO, performance tuning for fast load times, and a conversion-optimized structure to turn visitors into leads. The site is architected to rank for solar-related search terms and includes clear call-to-action funnels throughout.",
+    details:[{l:"Platform",v:"WordPress"},{l:"Industry",v:"Solar / Renewable Energy"},{l:"Services",v:"WP Dev, SEO, Performance"},{l:"Status",v:"✅ Live & Active"}],
+    badges:["WordPress","Custom Theme","On-Page SEO","Lead Generation","Speed Optimized"],
+    result:"Professional solar energy site built for rankings & conversions"
+  },
+  islamic:{
+    type:"Religion · Content Portal · Norway 🇳🇴",
+    title:"Islamic.no",
+    url:"https://www.islamic.no/",
+    desc:"A Norwegian Islamic content and resource portal serving the Scandinavian Muslim community. This project required multilingual WordPress configuration (Arabic + Norwegian), strict security hardening to protect sensitive content, mobile-first design for Norway's predominantly mobile audience, and full SEO tuning for Norwegian-language keywords. Special focus was placed on accessibility and site speed.",
+    details:[{l:"Platform",v:"WordPress"},{l:"Industry",v:"Religion / Islamic Content"},{l:"Services",v:"WP Dev, Security, Multilingual SEO"},{l:"Region",v:"Norway 🇳🇴"}],
+    badges:["WordPress","Multilingual (AR/NO)","Security Hardened","Mobile-First","Norwegian SEO"],
+    result:"Secure multilingual Islamic portal serving Scandinavia"
+  },
+  mystique:{
+    type:"Wellness · WooCommerce · Netherlands 🇳🇱",
+    title:"MystiqueCrystalsAndHealing.nl",
+    url:"https://www.mystiquecrystalsandhealing.nl/",
+    desc:"A Dutch healing crystals and Reiki therapy e-commerce website powered by WooCommerce. Built with WP Rocket 3.17 for exceptional speed scores, Dutch-language SEO to dominate the Netherlands market, an integrated Reiki booking system, product catalog management, and full mobile optimization. The site targets customers seeking crystal therapy, energy healing, and stress reduction services in the Netherlands.",
+    details:[{l:"Platform",v:"WordPress + WooCommerce"},{l:"Industry",v:"Wellness / Healing / Crystals"},{l:"Services",v:"E-commerce, Speed Optimization, Dutch SEO"},{l:"Region",v:"Netherlands 🇳🇱"}],
+    badges:["WooCommerce","WP Rocket 3.17","Dutch SEO","Reiki Booking","Mobile Optimized"],
+    result:"Live WooCommerce store — WP Rocket powered for blazing speed"
+  }
+};
+
+function openModal(key){
+  const p=PROJECTS[key];
+  if(!p)return;
+  const det=p.details.map(d=>`<div class="modal-cell"><div class="modal-cell-label">${d.l}</div><div class="modal-cell-val">${d.v}</div></div>`).join('');
+  const bad=p.badges.map(b=>`<span class="badge">${b}</span>`).join('');
+  const waMsg=`Hi Asif! I saw your ${p.title} project and want something similar for my business.`;
+  document.getElementById('modal-inner').innerHTML=`
+    <div class="modal-header">
+      <div class="modal-type">${p.type}</div>
+      <div class="modal-title">${p.title}</div>
+      <div class="modal-url">🔗 <a href="${p.url}" target="_blank">${p.url}</a></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-desc">${p.desc}</div>
+      <div class="modal-grid">${det}</div>
+      <div class="p-badges" style="margin-bottom:1.5rem">${bad}</div>
+      <div class="p-result" style="margin-bottom:1.75rem">${p.result}</div>
+      <div class="modal-actions">
+        <a href="${p.url}" target="_blank" class="modal-btn green">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Visit Live Site
+        </a>
+        <a href="https://wa.me/923136045037?text=${encodeURIComponent(waMsg)}" target="_blank" class="modal-btn wa">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Build Something Similar
+        </a>
+        <button onclick="closeModal()" class="modal-btn ghost">← Back</button>
+      </div>
+    </div>`;
+  document.getElementById('overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeBg(e){if(e.target===document.getElementById('overlay'))closeModal();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+document.querySelectorAll('.portfolio-card').forEach(c=>{
+  c.addEventListener('keydown',e=>{if(e.key==='Enter')c.click();});
+});
+
+function sendWA(){
+  const name=document.getElementById('fn').value.trim();
+  const email=document.getElementById('fe').value.trim();
+  const svc=document.getElementById('fs').value;
+  const msg=document.getElementById('fm').value.trim();
+  if(!name||!svc){alert('Please enter your name and select a service.');return;}
+  const txt=`Hi Asif! I found your portfolio and want to discuss a project.%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email||'Not provided')}%0A*Service:* ${encodeURIComponent(svc)}%0A*Details:* ${encodeURIComponent(msg||'Not provided')}`;
+  const note=document.getElementById('fnote');
+  note.style.display='block';
+  setTimeout(()=>{window.open(`https://wa.me/923136045037?text=${txt}`,'_blank');},500);
+}
+
+const io=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*80);});},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+const so=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.skill-fill').forEach(b=>{b.style.width=b.dataset.w+'%';});});},{threshold:.3});
+const sk=document.getElementById('skills');
+if(sk)so.observe(sk);
+</script>
+</body>
+</html>
